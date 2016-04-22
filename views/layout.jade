@@ -1,0 +1,41 @@
+doctype html
+html(lang="en")
+  head
+    title Jade App
+
+    link(rel="stylesheet", href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css")
+    //- if theme
+    //-   link(rel="stylesheet", href="https://bootswatch.com/#{theme}/bootstrap.min.css")
+  
+          
+    link(rel="stylesheet", href="style.css", type="text/css")
+    
+    script(src="http://code.jquery.com/jquery-2.2.3.min.js")
+    script(src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js")
+    script(src="main.js")
+body
+
+  nav.navbar.navbar-default
+    .container-fluid
+      .navbar-header
+        button.navbar-toggle.collapsed(type='button', data-toggle='collapse', data-target='#bs-example-navbar-collapse-1', aria-expanded='false')
+          span.sr-only Toggle navigation
+          span.icon-bar
+          span.icon-bar
+          span.icon-bar
+        a.navbar-brand(href='/') Home
+      #bs-example-navbar-collapse-1.collapse.navbar-collapse
+        ul.nav.navbar-nav
+          li
+            a(href='/messages') Messages
+          li
+            a(href='/post') Post
+      #bs-example-navbar-collapse-1.collapse.navbar-collapse
+        ul.nav.navbar-nav    
+          //- each theme in themes
+          //-   li
+          //-     a(href='/#{page}?theme=#{theme}')= theme
+        
+  block content
+    
+    

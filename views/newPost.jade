@@ -1,0 +1,10 @@
+extends ./layout.jade
+
+block content
+  .container
+    h1.text-center New Post
+    form
+      textarea.form-control(rows='3' placeholder='Lorem ipsum dolor')
+      input(type='text' placeholder='name')
+      input(type='text' placeholder='image url')
+      button(type='submit') Post    

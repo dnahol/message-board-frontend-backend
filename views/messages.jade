@@ -1,0 +1,15 @@
+extends ./layout.jade
+
+block content
+  .container
+    h1.text-center Messages
+    .row
+      each message in messages
+        .col-xs-12.col-md-4.message
+          div.date= message.date
+          div.name= message.name
+          img.avatar(src= message.url)
+          div.text= message.text
+
+
+        
